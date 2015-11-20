@@ -1,0 +1,107 @@
+<template name="listing">
+<!--<div class="breadcrumb-main">
+	<div class="container">
+		<div class="container-box">
+			<ul class="list-inline breadcam">
+				{{#each listParent _id}}
+				<li>
+					<a href="{{pathFor 'listing' id=_id}}" class="parent_refine">{{title}}</a><span><img src="/images/caret.png"></span></li>
+				{{/each}}
+				<li id="refine">REFINE<span><img src="/images/caret.png"></span></li>
+			</ul>
+		</div>
+		<div id="body_refine" style="display: block;">
+			<div class="col-xs-3 col-sm-3 col-lg-3">
+				<ul class="refine">
+					<li class="active"><a href="#home" data-toggle="tab">Price Range</a></li>
+					<li><a href="#rating" data-toggle="tab">Rating</a></li>
+					<li><a href="#brand" data-toggle="tab">Brand</a></li>
+					<li><a href="#advanced" data-toggle="tab">Advanced</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-9 col-sm-9 col-lg-9">
+				<div class="tab-content">
+					<div class="tab-pane active" id="home">
+						<div class="well">
+							<b>€ 10</b> <div class="slider slider-horizontal"><input type="text" id="sl2" data-slider-value="[0,50000000]" data-slider-step="10" data-slider-max="50000000" data-slider-min="10" value="" class="span2" style=""></div> <b>€ 50000000</b>
+						</div>
+					</div>
+					<div class="tab-pane" id="rating">
+                        <label>0</label><input type="radio" name="rate" class="rating" value="0">
+                        <label>1</label><input type="radio" name="rate" class="rating" value="1">
+						<label>2</label><input type="radio" name="rate" class="rating" value="2">
+						<label>3</label><input type="radio" name="rate" class="rating" value="3">
+						<label>4</label><input type="radio" name="rate" class="rating" value="4">
+						<label>5</label><input type="radio" name="rate" class="rating" value="5">
+					</div>
+					<div class="tab-pane" id="brand">
+                        <label>Dell</label> <input type="checkbox" name="brand[]" class="brand" value="aa">
+                        <label>Asus</label> <input type="checkbox" name="brand[]" class="brand" value="bb">
+                        <label>Fujisu</label><input type="checkbox" name="brand[]" class="brand" value="cc">
+                        <label>Acear</label><input type="checkbox" name="brand[]" class="brand" value="dd">
+                        <label>Sony</label><input type="checkbox" name="brand[]" class="brand" value="ee">
+                    </div>
+					<div class="tab-pane advance" id="advanced" >Settings Tab.
+                        <label>Dell</label> <input type="checkbox" name="advance[]" class="advance" value="dell">
+                        <label>Asus</label> <input type="checkbox" name="advance[]" class="advance" value="asus">
+                        <label>Fujisu</label><input type="checkbox" name="advance[]" class="advance" value="fujisu">
+                        <label>Acear</label><input type="checkbox" name="advance[]" class="advance" value="acear">
+                        <label>Sony</label><input type="checkbox" name="advance[]" class="advance" value="sony">
+
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+	<div class="section" id="page_product_listing">
+	
+	<div class="container">
+		<div class="col-md-12">
+			<div class="hold_result">
+				<p>{{countResult}} products result</p>
+			</div>
+			<div class="hold_bradcame">
+				<p class="pull-left green">Best selling <span class="fa fa-caret-right"></span></p>
+				<p class="pull-right black">View by page</p>
+			</div>
+		</div>
+		
+
+		<div class="hold_product">
+			<div class="row">
+				{{#each filter search _id refine rating brand advance}}
+				<div class="col-md-3">
+					<div class="product_item">
+						<a href="{{pathFor 'details' id=_id}}"><img src="/upload/{{getImg image}}" class="img-responsive img-circle center-block" width="200" height="200" /></a>
+						<a href="{{pathFor 'details' id=_id}}" class="title">{{title}}</a>
+						<div class="hold_price">
+							<a href="" class="price">{{price}} </a><a href="">{{#if isLiked _id}}<span id="favorite" class="fa fa-heart red pull-right"></span>
+								{{else}}<span class="fa fa-heart-o pull-right"></span>{{/if}}</a>
+						</div>
+					</div>		
+				</div>
+				{{/each}}
+				
+			</div>
+		</div>
+
+	</div>
+</div><!-- end container -->
+
+
+
+<a class="more">Load More</a>
+
+<!--
+<h1>{{title}}</h1>
+{{#each parentTag _id}}
+	<h2>{{title}}</h2>
+	{{#each tags _id}}
+		<input type="checkbox" id="tag_{{_id}}" class="tag"> {{title}}<br />
+	{{/each}}
+{{/each}}
+
+{{>quizz}}-->
+</template>

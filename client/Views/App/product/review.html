@@ -1,0 +1,25 @@
+<template name="review">
+    <div class="hold_feedback">
+            <div class="col-md-2">
+              <img src="/upload/{{getImgUrl user}}" class="img-responsive center-block">
+              <h4 class="bold text-center">{{getUsername user}}</h4>
+            </div>
+            <div class="col-md-7">
+              <p class="list-group-item-text">
+                <h2>{{title}}</h2>
+                {{comment}}
+              
+              </p>
+            </div>
+             <div class="col-md-3 ">
+              <p>{{getDate date}}</p>
+              <p>{{grade}}/5</p>
+              <a href="#" style="font-weight:bold; color:#333; margin:15px 0px"><i class="fa fa-heart-o"></i></a>
+            </div>
+          </div>
+	
+
+    
+
+
+</template>
