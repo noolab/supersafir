@@ -22,8 +22,8 @@ Template.cart.helpers({
 	
 });
 
-
-Template.cartview.helpers({
+/*modifier cartview sreyden/chantern*/
+Template.header.helpers({
 	getNameproduct: function(id_product){
 		return products.findOne({"_id":id_product}).title;
 	},
@@ -52,6 +52,17 @@ Template.cartview.helpers({
 	},
 	getProduct: function(id_product){
 		return products.findOne({"_id":id_product});
+	},
+	// upload image
+	getImg: function(id){
+
+			var img = images.findOne({_id:id});
+			if(img){
+				console.log(img.copies.images.key);
+				return img.copies.images.key;
+			}else{
+				return;
+			}
 	}
 });
 
@@ -83,5 +94,13 @@ Template.cart.events({
 		var shopid=tpl.$("#shop").val();
 		//console.log("ipAdresse"+ipAddress);
 		Meteor.call("addToCart",userId,productid,shopid,qty);
+	}
+});
+Template.header.events({
+	'click #remove':function(e){
+		e.preventDefault();
+		var id = this._id;
+		alert(id);
+		Meteor.call('removecart',id);
 	}
 });

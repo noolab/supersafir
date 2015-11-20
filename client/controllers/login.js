@@ -68,11 +68,15 @@ Template.login.events({
 		var point = '0';
 		var rerole = 'member';
 		var msg = '';
-		if( firstname == '' || lastname == ''){
+		if( firstname == '' || lastname == ''  || email=='' || password ==''){
 			if( firstname == '' )
-				msg += 'Firt Name is required.<br>';
+				msg += 'Firt Name is required.';
 			if( lastname == '' )
 				msg += 'Last Name is required.';
+			if( email == '' )
+				msg += 'email is required.';
+			if( password == '' )
+				msg += 'password is required.';
 			
 			Session.set("registerError", msg );
 		}
@@ -113,4 +117,10 @@ Template.registerSuccess.onRendered(function(){
 		$('.modal-backdrop').remove();
 		Router.go('/');
 	})
+});
+Template.registerSuccess.events({
+	"click #goto-login": function(){
+		$('.modal-backdrop').remove();
+		Router.go('/login');
+	}
 });

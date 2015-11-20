@@ -1,0 +1,247 @@
+<template name="reward">
+<!--Start container -->
+	<div class="container" style="padding-top:30px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                	<h3 class="my1h3">MY SAFIR PROFIL</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                	<h3 class="my1h3">MEMBER PROFIL</h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                	<h3 class="my1h3 backre">REWARDS & POINT</h3>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mept">
+
+            	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mept1">
+                	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 backptgold">
+                	<h1 class="text-right" style="margin: 0px;">{{getpoint}} pt</h1>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 rewards">
+            	<h3>REWARDS / HOW TO EARN MORE POINTS</h3>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 rewards1">
+            	<div id="konrewardgold">
+                	<h3>REWARDS</h3>
+                </div>
+            </div>
+            <!--Start product-->
+				<div class="container">
+					<div id="ca-container" class="ca-container">
+						<div class="ca-wrapper">
+							{{#each getproduct}}
+							<div class="ca-item ca-item-{{getCount}}">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												{{title}}
+											</h3>
+											<h1>{{point}} pt</h1>
+								</div>
+							</div>
+							{{/each}}
+							
+						</div>
+					</div>
+				</div>	
+			<div class="buttons"></div>
+            <!--End product-->
+            <!--Start product-->
+				<div class="container">
+					<div id="ca-container1" class="ca-container1">
+						<div class="ca-wrapper">
+							<div class="ca-item ca-item-1">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+							<div class="ca-item ca-item-2">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+							
+							<div class="ca-item ca-item-3">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+							
+							<div class="ca-item ca-item-4">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+							
+							<div class="ca-item ca-item-5">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+							<div class="ca-item ca-item-6">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+							
+							<div class="ca-item ca-item-7">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+							<div class="ca-item ca-item-8">
+								<div class="ca-item-main">
+									<div class="ca-icon"></div><br>
+											<h3>
+												ESTEE LALDER PLIRE COLOR<br/>
+												VERNIS A ONGLFS
+											</h3>
+											<h1>180 pt</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+            <!--End product-->	
+			
+             <!--Start product1-->
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 rewards1" style="margin-top: -139px;">
+            	<div id="konrewardgold">
+                	<h3>HOW TO EARN MORE POINTS</h3>
+                </div>
+            </div>
+             <!--Start hover points-->
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 maginbotom" align="center">
+            	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product maginbotom">
+                	
+                    <a href="#"><img src="/images/pro3.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro3.png'" class="img-responsive"></a>
+
+                    <h3>
+                    	get points by visiting to the site<br/>
+                        (extra points : visit 5 times a week)
+                        
+                    </h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product maginbotom">
+                	<a href="#"><img src="/images/pro4.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro4.png'" class="img-responsive"></a>
+                     <h3>
+                    	extra points<br/>
+                        on a specific day
+                    </h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product">
+                	<a href="#"><img src="/images/pro5.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro5.png'" class="img-responsive"></a>
+                     <h3>
+                    	extra points<br/>
+                        for a specific product
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 maginbotom" align="center">
+            	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product maginbotom">
+                	<a href="#"><img src="/images/pro6.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro6.png'" class="img-responsive"></a>
+                    <h3>
+                    	extra points<br/>
+                        for watching tutorials (blu CIGS)
+                    </h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product maginbotom">
+                	<a href="#"><img src="/images/pro7.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro7.png'" class="img-responsive"></a>
+                     <h3>
+                    	extra points<br/>
+                        when shopping online
+                    </h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product">
+                	<a href="#"><img src="/images/pro8.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro8.png'" class="img-responsive"></a>
+                     <h3>
+                    	extra points<br/>
+                        for sharing Sfir perfumery
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 maginbotom" align="center">
+            	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product maginbotom">
+                	<a href="#"><img src="/images/pro9.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro9.png'" class="img-responsive"></a>
+                    <h3>
+                    	extra points<br/>
+                        for like the page
+                    </h3>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product maginbotom">
+                	<a href="#"><img src="/images/pro10.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro10.png'" class="img-responsive"></a>
+                     <h3>
+                    	Referrals : write a mail to your friend
+                        
+                    </h3>
+                    <form style="padding:20px;">
+                    	<input type="text" name="text" value="">
+                        <input id="submite" type="submit" value="SEND">
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 product">
+                	<a href="#"><img src="/images/pro7.png" onmouseover="this.src='/images/point.png'" 
+                    onmouseout="this.src='/images/pro7.png'" class="img-responsive"></a>
+                    <h3>
+                        extra points For comment
+                    </h3>
+                </div>
+            </div>
+            <!--End pro points-->
+        </div>
+        <!--End row -->
+    </div>
+
+
+</template>

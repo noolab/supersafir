@@ -29,7 +29,34 @@
 							<ul class="nav nav-pills">
 								<li><a href="#">Feedback</a></li>
 								<li><a href="/home">Home</a></li>
-								<li><a href="#">0</a></li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+										<img src="/images/cart3.png" alt=""/>20$ <strong class="caret"></strong></a>
+									<ul class="dropdown-menu cart-dropdown">
+									{{#each items}}
+										<li class="item-cart">
+											<div class="col-lg-3">
+													{{#with getProduct id_product}}
+
+														<img style="border:3px solid #000; text-align:right" src="/upload/{{getImg image}}" class="img-circle" alt="{{image}}" height="50" width="50" >
+													{{/with}}
+											</div>
+											<div class="col-lg-7">
+												<p class="item-description text-left">{{getNameproduct id_product}}</p>
+												<p>${{getPriceproduct id_product}}</p>
+											</div>
+											<div class="col-lg-2">
+												<a id="remove" href=""><i class="fa fa-times"></i></a>
+											</div>
+										</li>
+									{{/each}}
+										<li class="item-cart">
+											<div class="col-lg-12 total">
+												<p class="total-description">TOTAL: <span>${{total}}</span> <button class="btn btn-warning btn-checkout pull-right checkout">Checkout</button></p>
+											</div>
+										</li>
+									</ul>
+								</li>
 								<li><a href="#"><i class="fa fa-heart fa-1x"></i></a></li>
 							</ul>
 						</div>

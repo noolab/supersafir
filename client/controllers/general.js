@@ -1,4 +1,5 @@
 Template.registerHelper('getImg', function (id) {
+    
         if(id=='')
             return 'unknown.png';
             if(id.indexOf("/uploads")>-1){
